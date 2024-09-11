@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); /* font-family: "Bellota", system-ui; */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #3a3939;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+    font-family: "Bellota", system-ui;
+    color: #ffffff; 
+}
+header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    max-width: 100%;
+    border-bottom: 3px solid;
+}   
+h2 {
+    font-size: 22pt;
+}
+a {
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+}
+.titulo-nome {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25pt;  
+    font-weight: bolder;
+}
+.sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+    width: 100%;
+}
+.sobre img {
+    width: 250px;
+    height: auto;
+    border-radius: 15%;
+    box-shadow: 2px 2px 8px rgb(26, 26, 26, 0.9);
+}
+.card-sobre {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card-sobre p {
+    margin: 5px;
+    font-size: 16pt;
+    font-weight: 450;
+    text-align: justify;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 500px;  
+}
+.card p {
+    margin: 5px;
+    font-size: 16pt; 
+    font-weight: 450;
+    text-align: justify;
+}
+.experiencias {
+    display: flex;
+    border-bottom: 3px solid;
+}
+.experiencias h2 {
+    font-size: 25pt;
+    align-items: flex-start;
+}
+.atividades {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: justify;
+    gap: 100px; 
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    border-bottom: 3px solid;
+}
+.atividades img {
+    display: flex;
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+}
+.atividades h3 {
+    display: flex;
+    font-size: 17pt; 
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 15px;
+    width: 100px;
+}
+.card ul {
+    list-style: none; 
+    padding-left: 0; 
+}
+.card li {
+    position: relative;
+    font-size: 16pt;
+    font-weight: 450;
+    padding-left: 40px; 
+}
+.card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px; 
+    height: 16px; 
+    background-image: url('icone_list.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-container .tooltip-content {
+    visibility: hidden;
+    width: 30   0px; 
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -100px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-content img {
+    width: 250px; 
+    height: auto;
+    border-radius: 5px;
+}
+
+.tooltip-content p {
+    margin: 5px 0 0;
+    font-size: 14px; 
+}
+
+
+footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.social-icon img {
+    width: 40px; 
+    height: 40px; 
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+
+.social-icon:hover img {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 450px) {
+    header {
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre img {
+        width: 250px;
+        height: auto;
+        border-radius: 15%;
+        box-shadow: 2px 2px 8px rgb(26, 26, 26, 0.9);
+    }
+    .card-sobre {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .card-sobre p {
+        margin: 5px;
+        font-size: 16pt;
+        font-weight: 450;
+        text-align: justify;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        width: auto;
+    }
+    .card p {
+        margin: 15px;
+        font-size: 16pt;
+        font-weight: 450;
+        text-align: justify;
+    }
+    .experiencias {
+        display: flex;
+        flex-direction: column;
+    }
+    .experiencias h2 {
+        font-size: 25pt;
+        align-items: center;
+    }
+    .atividades {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: justify;
+        gap: 30px; 
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        border-bottom: 3px solid;
+    }
+    .atividades img {
+        display: flex;
+        width: 100px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    .atividades h3 {
+        display: flex;
+        font-size: 17pt; 
+        align-items: center;
+        justify-content: center; 
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .card ul {
+        list-style: none; 
+        padding-left: 0; 
+    }
+    .card li {
+        position: relative;
+        font-size: 16pt;
+        font-weight: 450;
+        padding-left: 40px; 
+    }
+    .card li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px; 
+        height: 16px; 
+        background-image: url('icone_list.png'); 
+        background-size: contain; 
+        background-repeat: no-repeat;
+    }
+    .footer-content {
+        flex-direction: row;
+    }
+}
